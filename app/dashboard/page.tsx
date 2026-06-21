@@ -137,7 +137,7 @@ export default function Dashboard() {
                   <CartesianGrid strokeDasharray="3 3" stroke="#1e1e38" />
                   <XAxis dataKey="mes" tick={{ fill: '#7070a0', fontSize: 12 }} axisLine={false} tickLine={false} />
                   <YAxis tickFormatter={fmt} tick={{ fill: '#7070a0', fontSize: 11 }} axisLine={false} tickLine={false} />
-                  <Tooltip contentStyle={{ background: '#111122', border: '1px solid #1e1e38', borderRadius: 8, color: '#e2e2f0' }} formatter={(v: number) => ['$' + v.toLocaleString('es-MX')]} />
+                  <Tooltip contentStyle={{ background: '#111122', border: '1px solid #1e1e38', borderRadius: 8, color: '#e2e2f0' }} formatter={(v) => ['$' + Number(v).toLocaleString('es-MX')]} />
                   <Area type="monotone" dataKey="ingresos" stroke="#6c63ff" strokeWidth={2} fill="url(#gi)" />
                   <Area type="monotone" dataKey="gastos" stroke="#ef4444" strokeWidth={2} fill="url(#gg)" />
                 </AreaChart>

@@ -122,7 +122,7 @@ export default function Proyectos() {
                 <YAxis tickFormatter={v => '$' + Math.abs(v / 1000).toFixed(0) + 'k'} tick={{ fill: '#7070a0', fontSize: 11 }} axisLine={false} tickLine={false} />
                 <Tooltip
                   contentStyle={{ background: '#111122', border: '1px solid #1e1e38', borderRadius: 8, color: '#e2e2f0' }}
-                  formatter={(v: number) => ['$' + Math.abs(v).toLocaleString()]}
+                  formatter={(v) => ['$' + Math.abs(Number(v)).toLocaleString()]}
                 />
                 <Bar dataKey="ingreso" fill="#22c55e" radius={[3, 3, 0, 0]} name="Ingresos" />
                 <Bar dataKey="egreso" fill="#ef4444" radius={[3, 3, 0, 0]} name="Egresos" />
